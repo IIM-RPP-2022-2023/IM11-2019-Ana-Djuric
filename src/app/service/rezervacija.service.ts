@@ -7,7 +7,7 @@ import { Rezervacija } from '../model/rezervacija.model';
 @Injectable()
 export class RezervacijaService {
 
-  private readonly API_URL = 'http://localhost:8082/rezervacijeZaFilm/';
+  private readonly API_URL = 'http://localhost:8082/rezervacija/';
 
   private readonly API_URL_P = 'http://localhost:8082/rezervacijeZaFilm/';
 

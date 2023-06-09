@@ -68,8 +68,8 @@ export class RezervacijaComponent {
       this.dataSource.sortingDataAccessor = (data:any, property) =>{
         switch(property){
           case 'id': return data[property];
-          case 'brojOsoba': return data[property];
-          case 'cenaKarte': return data[property];
+          case 'broj_osoba': return data[property];
+          case 'cena_karte': return data[property];
           case 'datum': return data[property];
           case 'film': return data.artikl.naziv.toLocaleLowerCase();
           default: return data[property].toLocaleLowerCase();
@@ -80,8 +80,8 @@ export class RezervacijaComponent {
     });
  }
 
-  public openDialog(flag: number, id: number, brojOsoba: number, cenaKarte: number, datum: Date, placeno: boolean, film: Film, sala: Sala) {
-    const dialog = this.dialog.open(RezervacijaDialogComponent, {data: {id: id, brojOsoba: brojOsoba, cenaKarte: cenaKarte, datum: datum, placeno: placeno, film: film, sala: sala}});
+  public openDialog(flag: number, id: number, broj_osoba: number, cena_karte: number, datum: Date, placeno: boolean, film: Film, sala: Sala) {
+    const dialog = this.dialog.open(RezervacijaDialogComponent, {data: {id: id, broj_osoba: broj_osoba, cena_karte: cena_karte, datum: datum, placeno: placeno, film: film, sala: sala}});
     dialog.componentInstance.flag = flag;
     dialog.afterClosed().subscribe(result => {
       if (result === 1) {
