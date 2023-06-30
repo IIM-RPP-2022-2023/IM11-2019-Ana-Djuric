@@ -42,6 +42,8 @@ export class FilmComponent {
       this.dataSource.sortingDataAccessor = (data:any, property) =>{
         switch(property){
           case 'id': return data[property];
+          case 'recenzija': return data[property];
+          case 'trajanje': return data[property];
           default: return data[property].toLocaleLowerCase();
         }
       };

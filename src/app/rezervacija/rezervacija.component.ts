@@ -52,18 +52,8 @@ export class RezervacijaComponent {
 
   public loadData(){
     //this.dataSource = this.rezervacijaService.getRezervacije(this.selektovanFilm.id);
-    this.rezervacijaService.getRezervacije(this.selektovanFilm.id).subscribe( data => {
+    this.rezervacijaService.getRezervacijeZaFilm(this.selektovanFilm.id).subscribe( data => {
       this.dataSource = new MatTableDataSource(data);
-
-      // pretraga po nazivu stranog kljuca
-      this.dataSource.filterPredicate = (data: any, filter: string) => {
-        const accumulator = (currentTerm: string, key: string) => {
-          return key === 'film' ? currentTerm + data.film.naziv : currentTerm + data[key];
-        };
-        const dataStr = Object.keys(data).reduce(accumulator, '').toLowerCase();
-        const transformedFilter = filter.trim().toLowerCase();
-        return dataStr.indexOf(transformedFilter) !== -1;
-      };
 
       this.dataSource.sortingDataAccessor = (data:any, property) =>{
         switch(property){
@@ -71,7 +61,7 @@ export class RezervacijaComponent {
           case 'broj_osoba': return data[property];
           case 'cena_karte': return data[property];
           case 'datum': return data[property];
-          case 'film': return data.artikl.naziv.toLocaleLowerCase();
+          case 'placeno': return data[property];
           default: return data[property].toLocaleLowerCase();
         }
       };

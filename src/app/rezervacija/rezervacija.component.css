@@ -18,7 +18,7 @@
   }
   
   .mat-column-id {
-    flex: 0 0 5%;
+    flex: 0 0 10%;
   }
   
   .mat-column-brojOsoba {
@@ -46,7 +46,7 @@
   }
   
   .mat-column-actions {
-    flex: 0 0 15%;
+    flex: 0 0 10%;
   }
   
   .title-center {

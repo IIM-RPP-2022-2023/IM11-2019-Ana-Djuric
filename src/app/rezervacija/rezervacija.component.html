@@ -26,7 +26,7 @@
       </ng-container>
   
       <ng-container matColumnDef="datum">
-        <mat-header-cell *matHeaderCellDef mat-sort-header="date">Datum</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Datum</mat-header-cell>
         <!--- <mat-cell *matCellDef="let row">{{ row.datum }}</mat-cell> --->
         <mat-cell *matCellDef="let row">{{ row.datum | date: "dd.MM.yyyy."}}</mat-cell>
       </ng-container>
@@ -38,12 +38,12 @@
       </ng-container>
   
       <ng-container matColumnDef="film">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Film</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef>Film</mat-header-cell>
         <mat-cell *matCellDef="let row">{{row.film.id}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="sala">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Sala</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef>Sala</mat-header-cell>
         <mat-cell *matCellDef="let row">{{row.sala.id}}</mat-cell>
       </ng-container>
   

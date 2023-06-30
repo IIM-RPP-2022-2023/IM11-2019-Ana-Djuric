@@ -27,8 +27,8 @@ export class RezervacijaService {
     return this.dataChange.asObservable();
   }
 
-  public getRezervacije(idSale: number): Observable<Rezervacija[]> {
-    this.httpClient.get<Rezervacija[]>(this.API_URL_P + idSale).subscribe({
+  public getRezervacijeZaFilm(idFilma: number): Observable<Rezervacija[]> {
+    this.httpClient.get<Rezervacija[]>(this.API_URL_P + idFilma).subscribe({
       next: (data) => {
         this.dataChange.next(data);
       },

@@ -56,8 +56,8 @@ export class SalaComponent implements OnInit {
         switch(property){
           case 'id': return data[property];
           case 'kapacitet': return data[property];
-          case 'brojRedova': return data[property];
-          case 'bioskop': return data.bioskop.naziv.toLocaleLowerCase();
+          case 'broj_redova': return data[property];
+          case 'bioskop': return data.bioskop.naziv;
           default: return data[property].toLocaleLowerCase();
         }
       };

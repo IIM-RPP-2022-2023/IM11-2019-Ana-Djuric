@@ -1,6 +1,4 @@
-.selectedRow {
-    background-color: lightgray;
-  }
+
   
   .container {
     display: flex;
@@ -26,7 +24,7 @@
   }
   
   .mat-column-kapacitet {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
   }
   .mat-column-brojRedova {
     flex: 0 0 25%;
@@ -35,7 +33,7 @@
     flex: 0 0 25%;
   }
   .mat-column-actions {
-    flex: 0 0 20%;
+    flex: 0 0 10%;
   }
   
   .title-center {
