@@ -66,8 +66,8 @@ export class SalaComponent implements OnInit {
     });
 }
 
-  public openDialog(flag: number, id: number, kapacitet: number, brojRedova: number, bioskop: Bioskop) {
-    const dialog = this.dialog.open(SalaDialogComponent, {data: {id: id, kapacitet: kapacitet, brojRedova: brojRedova, bioskop: bioskop}});
+  public openDialog(flag: number, id: number, kapacitet: number, broj_redova: number, bioskop: Bioskop) {
+    const dialog = this.dialog.open(SalaDialogComponent, {data: {id: id, kapacitet: kapacitet, broj_redova: broj_redova, bioskop: bioskop}});
     dialog.componentInstance.flag = flag;
     dialog.afterClosed().subscribe(result => {
       if (result === 1) {
